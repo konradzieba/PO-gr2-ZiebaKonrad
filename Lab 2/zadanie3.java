@@ -5,7 +5,7 @@ import static java.lang.Math.*;
 
 public class Main {
 
-    private static void doMatricMultiplication(int[][] matrix1, int[][] matrix2, int rows1, int columns1, int columns2,
+    private static void mnozenie(int[][] matrix1, int[][] matrix2, int rows1, int columns1, int columns2,
                                                int[][] result) {
 
         for (int i = 0; i < rows1; i++) {
@@ -16,7 +16,7 @@ public class Main {
             }
         }
     }
-    private static void doPrintResultMatric(int[][] result) {
+    private static void wyswietl(int[][] result) {
         for (int i = 0; i < result.length; i++) {
             for (int j = 0; j < result[1].length; j++) {
                 System.out.print(result[i][j] + " ");
@@ -72,9 +72,9 @@ public class Main {
         int columns2 = b[1].length;
         int[][] result = new int[rows1][columns2];
 
-        doMatricMultiplication(a, b, rows1, columns1, columns2, result);
+        mnozenie(a, b, rows1, columns1, columns2, result);
         System.out.println();
-        doPrintResultMatric(result);
+        wyswietl(result);
 
     }
 }
