@@ -1,7 +1,9 @@
+package com.company;
 import java.util.Scanner;
 import java.util.Arrays;
 import java.util.Random;
 import static java.lang.Math.*;
+
 
 public class Main {
 
@@ -162,6 +164,7 @@ public class Main {
             lewy++;
             prawy--;
         }
+        wypisz(tab);
     }
 
 
@@ -170,6 +173,11 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         System.out.println("Podaj n: ");
         int n = scan.nextInt();
+        if(n<1 || n>100)
+        {
+            System.out.println("Wybrana liczba jest z poza zakresu");
+            System.exit(0);
+        }
         int[] tab = new int[n];
         int minWartosc = -999, maxWartosc=999;
         generuj(tab,n,minWartosc,maxWartosc);
@@ -177,10 +185,17 @@ public class Main {
         System.out.println("\n" + ileNieparzystych(tab));
         System.out.println(ileParzystych(tab));
         System.out.println(ileDodatnich(tab));
-        signum(tab);
+        System.out.println(ileUjemnych(tab));
+        System.out.println(ileZerowych(tab));
+        System.out.println(ileMaksymalnych(tab));
+        System.out.println(sumaDodatnich(tab));
+        System.out.println(sumaUjemnych(tab));
+        System.out.println(dlugoscMaksymalnegoCiaguDodatnich(tab));
+        odwrocFragment(tab,2,5);
+        //signum(tab);
+
     }
 }
-
 
 
 
