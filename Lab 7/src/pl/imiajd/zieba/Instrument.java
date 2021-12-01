@@ -31,7 +31,7 @@ abstract public class Instrument {
 
     @Override
     public String toString(){
-        String wynik = producent;
+        String wynik = producent + " ";
         wynik += Integer.toString(rokProdukcji.getYear());
         return wynik;
     }
