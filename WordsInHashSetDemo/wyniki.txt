@@ -1,0 +1,5 @@
+HashSet:
+5908 unikalnych słów. 12 milisekund.
+
+TreeSet:
+5908 unikalnych słów. 28 milisekund.
